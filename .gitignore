@@ -16,4 +16,4 @@ build/
 htmlcov/
 uploads/
 *.db
-
+.cursor
