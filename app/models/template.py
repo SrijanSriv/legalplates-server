@@ -14,7 +14,7 @@ class Template(Base):
     jurisdiction = Column(String)
     similarity_tags = Column(ARRAY(String))
     body_md = Column(Text, nullable=False)
-    metadata = Column(JSON)
+    template_metadata = Column(JSON)
     embedding = Column(ARRAY(Float))  # Store embedding as array
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
@@ -28,7 +28,7 @@ class Template(Base):
             "jurisdiction": self.jurisdiction,
             "similarity_tags": self.similarity_tags,
             "body_md": self.body_md,
-            "metadata": self.metadata,
+            "template_metadata": self.template_metadata,
             "created_at": self.created_at.isoformat() if self.created_at else None,
         }
 

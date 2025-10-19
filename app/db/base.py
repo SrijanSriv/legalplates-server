@@ -15,7 +15,6 @@ Base = declarative_base()
 
 
 def get_db():
-    """Dependency for FastAPI routes"""
     db = SessionLocal()
     try:
         yield db
@@ -24,7 +23,5 @@ def get_db():
 
 
 def init_db():
-    """Initialize database tables"""
-    from app.models import templates, template_variables, documents, instances
-    Base.metadata.create_all(bind=engine)
-
+    from app.models import Template, TemplateVariable, Instance, Document
+    Base.metadata.create_all(bind=engine, tables=[Template.__table__, TemplateVariable.__table__, Instance.__table__, Document.__table__])
