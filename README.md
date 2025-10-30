@@ -4,6 +4,13 @@
 
 A sophisticated FastAPI backend that transforms legal documents into intelligent, reusable templates using advanced AI techniques including semantic search, variable extraction, and automated question generation.
 
+## 📝 Submission Handover
+
+- [Demo Video](https://drive.google.com/file/d/1F5xZmIj0e_xH6OTlmmAedu7UAoivY36o/view?usp=sharing)
+- [Sample Output - A Service Level Agreement](./Service_Level_Agreement.md)
+- [Template + Frontmatter for the SLA](./template_frontmatter.txt)
+- [Template Variables for the SLA](https://docs.google.com/spreadsheets/d/14_Mxbg7AyOsI1JhYJ7EuJ_XHFCCutsSw0A-d4okQOwo/edit?usp=sharing)
+
 ## 🚀 Quick Start
 
 ### Prerequisites
