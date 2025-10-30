@@ -124,9 +124,9 @@ Extract variables following these rules:
 """
 CRITICAL REQUIREMENTS:
 1. Document must be for legal purposes only
-2. If non-legal document submitted, convert to appropriate legal template
-3. Maintain professional legal language and structure
-4. Ensure compliance with legal document standards
+2. Require ISO dates, currency formats, and minimal regex for IDs where applicable
+3. Ensure compliance with legal document standards
+4. If the source doc contains mandatory statutory references, do not variable-ize statute text; only variable-ize party-specific facts
 """
 ```
 
