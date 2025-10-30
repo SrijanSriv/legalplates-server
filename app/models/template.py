@@ -1,5 +1,6 @@
-from sqlalchemy import Column, Integer, String, Text, DateTime, ARRAY, JSON, Float
+from sqlalchemy import Column, Integer, String, Text, DateTime, ARRAY, JSON
 from sqlalchemy.sql import func
+from pgvector.sqlalchemy import Vector
 from app.db.base import Base
 
 
@@ -15,7 +16,7 @@ class Template(Base):
     similarity_tags = Column(ARRAY(String))
     body_md = Column(Text, nullable=False)
     template_metadata = Column(JSON)
-    embedding = Column(ARRAY(Float))  # Store embedding as array
+    embedding = Column(Vector(384))
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
     def to_dict(self):

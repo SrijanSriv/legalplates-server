@@ -17,6 +17,7 @@ class TemplateVariable(Base):
     dtype = Column(String, default="string")
     regex = Column(String)
     enum_values = Column(ARRAY(String))
+    question = Column(Text)  # JSON string of questions for this variable
 
     def to_dict(self):
         return {
@@ -30,5 +31,6 @@ class TemplateVariable(Base):
             "dtype": self.dtype,
             "regex": self.regex,
             "enum_values": self.enum_values,
+            "question": self.question,
         }
 
